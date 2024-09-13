@@ -1,4 +1,4 @@
-module github.com/maximka200/PodkraduliShop_Backend/protobuff_product
+module github.com/maximka200/protobuff_product
 
 go 1.23.0
 
