@@ -8,6 +8,7 @@ service Product {
     rpc NewProduct (NewProductRequest) returns (NewProductResponse);
     rpc DeleteProduct (DeleteProductRequest) returns (DeleteProductResponse);
     rpc GetProduct (GetProductRequest) returns (GetProductResponse);
+    rpc GetProducts (GetProductsRequest) returns (GetProductsResponse);
 }
 
 message NewProductRequest {
@@ -28,12 +29,20 @@ message GetProductRequest {
     int64 id = 1;
 }
 
+message GetProductsRequest {
+    int64 count = 1;
+}
+
 message NewProductResponse {
     int64 id = 1;
 }
 
 message DeleteProductResponse {
     bool isDelete = 1;
+}
+
+message GetProductsResponse {
+    repeated GetProductResponse ProductList = 1;
 }
 
 message GetProductResponse {
