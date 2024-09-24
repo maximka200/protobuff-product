@@ -46,7 +46,7 @@ message GetProductsResponse {
 }
 
 message GetProductResponse {
-    int64 id = 1;
+    string id = 1;
     string imageURL = 2;
     string title = 3;
     string description = 4;
